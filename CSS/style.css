@@ -31,15 +31,42 @@ body {
 }
 
 #red {
-    border: 1px solid red;
+    border: 5px solid red;
+    background-color: orange;
+    position: relative;
+    top: -300px;
+    animation: orange 4s ease-in-out forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes orange {
+    100% {top: 0;}
 }
 
 #green {
-    border: 1px solid green;
+    border: 5px solid green;
+    background-color: yellow;
+    animation: yellow 4s ease-in-out forwards;
+    opacity: 0;
+    animation-iteration-count: infinite;
+    transform: rotateY(180deg);
+}
+
+@keyframes yellow {
+    100% {opacity: 1;}
+    25% {transform: rotate(180deg);}
 }
 
 #blue {
-    border: 1px solid blue;
+    border: 5px solid blue;
+    background-color: pink;
+    animation: pink 4s ease-in-out forwards;
+    animation-iteration-count: infinite;
+    transform: rotateX(180deg);
+}
+
+@keyframes pink {
+    50% { transform: rotate(180deg);}
 }
 
 .footer {
